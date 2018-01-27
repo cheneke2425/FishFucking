@@ -239,7 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b6ff36f96108043a91b6937d30e5e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 5
+  maxSafeDistance: 5
+  breakDistance: 10
   fish1: {fileID: 1304621530}
   fish2: {fileID: 840796537}
   fishDistance: 0
