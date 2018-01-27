@@ -25,7 +25,7 @@ public class distanceCheck : MonoBehaviour {
 
 		}
 		else {
-			GetComponentInChildren<SpringJoint2D>().enabled = true;
+			GetComponentInChildren<SpringJoint2D>().enabled = false;
 		}
 
 
