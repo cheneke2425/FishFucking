@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - StartButt
+  - WorkButt
+  - TutButt
+  - ExitButt
   layers:
   - Default
   - TransparentFX
