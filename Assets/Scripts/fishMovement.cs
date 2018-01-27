@@ -26,15 +26,15 @@ public class fishMovement : MonoBehaviour
 	{
 		Vector3 moveForward = myMoveSpeed * new Vector3(Input.GetAxis("Horizontal" + fishNum), Input.GetAxis("Vertical" + fishNum), 0);
 		transform.position += moveForward * Time.deltaTime;
-		if (Vector3.Magnitude(transform.up) > 0.99f)
-		{
-			transform.up = transform.up.normalized;
-		}
-		else {
-			transform.up = - transform.up.normalized;
-		}
 		transform.up += moveForward.normalized * Time.deltaTime * myTurnSpeed;
 
+
+	}
+
+	void OnTriggerEnter2D(Collider2D item)
+	{
+		item.gameObject.SetActive(false);
+		print("item picked up");
 
 	}
 }

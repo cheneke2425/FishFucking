@@ -19,9 +19,7 @@ public class camControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		targetPos = new Vector3((Fish1.transform.position.x + Fish2.transform.position.x) / 2f, (Fish1.transform.position.y + Fish2.transform.position.y) / 2f, -10f);
-		print(targetPos);
-		//transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, dampSpeed) * Time.deltaTime;
+		targetPos = new Vector3((Fish1.transform.position.x + Fish2.transform.position.x) / 2f, (Fish1.transform.position.y + Fish2.transform.position.y) / 2f, -10f);;
 		transform.position = Vector3.Lerp(transform.position, targetPos, 0.5f);
 		
 	}
