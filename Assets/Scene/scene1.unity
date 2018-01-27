@@ -239,8 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b6ff36f96108043a91b6937d30e5e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSafeDistance: 5
-  breakDistance: 10
+  maxSafeDistance: 10
+  breakDistance: 7
   fish1: {fileID: 1304621530}
   fish2: {fileID: 840796537}
   fishDistance: 0
@@ -392,7 +392,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 1.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -489,7 +489,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 1.5
   m_AngularDrag: 3.53
   m_GravityScale: 0
   m_Material: {fileID: 0}

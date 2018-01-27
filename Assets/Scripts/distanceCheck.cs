@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class distanceCheck : MonoBehaviour {
     public float maxSafeDistance;
-	public float breakDistance;
+	//public float breakDistance;
     public GameObject fish1;
     public GameObject fish2;
     public float fishDistance;
+
+	bool springEnabled = false;
+	float timeFarApart = 0f;
+	public float maxTimeFarApart = 10f;
 
 	SpringJoint2D spring;
     //
@@ -22,26 +26,36 @@ public class distanceCheck : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		float springDis = spring.distance;
-		springDis += 0.1f * Time.deltaTime;
-		spring.distance = springDis;
+		//float springDis = spring.distance;
+		//springDis += 0.1f * Time.deltaTime;
+		//spring.distance = springDis;
 
-		maxSafeDistance = springDis + 2f;
+		//maxSafeDistance = springDis + 2f;
 
        fishDistance = Vector3.Distance(fish1.transform.position, fish2.transform.position);
 		if (fishDistance > maxSafeDistance)
 		{
 			GetComponentInChildren<SpringJoint2D>().enabled = true;
 
-			if (fishDistance > breakDistance)
-			{
-				Debug.Log("dead");
-			}
-
+			springEnabled = true;
 		}
 		else {
 			GetComponentInChildren<SpringJoint2D>().enabled = false;
+
+			springEnabled = false;
 		}
+
+		if (springEnabled)
+		{
+			timeFarApart += 1f;
+			print(timeFarApart);
+
+			if (timeFarApart > maxTimeFarApart)
+			{
+				Debug.Log("dead");
+			}
+		}
+
 
 
 	}

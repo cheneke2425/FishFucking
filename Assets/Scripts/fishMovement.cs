@@ -26,7 +26,16 @@ public class fishMovement : MonoBehaviour
 	{
 		Vector3 moveForward = myMoveSpeed * new Vector3(Input.GetAxis("Horizontal" + fishNum), Input.GetAxis("Vertical" + fishNum), 0);
 		transform.position += moveForward * Time.deltaTime;
-		transform.up += moveForward.normalized * Time.deltaTime * myTurnSpeed;
+		if (moveForward.x >= 0f)
+		{
+			transform.up = new Vector3(1, 0, 0);
+		}
+		else
+		{
+			transform.up = new Vector3(-1, 0, 0);
+		}
+			
+		//transform.up = moveForward.normalized * Time.deltaTime;
 
 
 	}
