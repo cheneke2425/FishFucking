@@ -18,7 +18,7 @@ public class LineScript : MonoBehaviour {
         GetComponent<LineRenderer>().SetPosition(1, myFish2.transform.position);
         Vector3 betweenFish = myFish1.transform.position - myFish2.transform.position;
         float distance = betweenFish.magnitude;
-        myLine.SetWidth(1/distance,1/distance);
+        myLine.SetWidth(0.2f*(1-distance/8),0.2f*(1-distance/8));
      
     }
 }
