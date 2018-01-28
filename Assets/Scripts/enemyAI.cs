@@ -56,8 +56,6 @@ public class enemyAI : MonoBehaviour
 
 		if (currentState == EnemyState.Patroling)
 		{
-			print("Enemy patroling");
-
 			targetFish = null;
 
 			if (Vector3.Magnitude(transform.position - moveDestination) <= 0.1f)
@@ -81,8 +79,6 @@ public class enemyAI : MonoBehaviour
 		else if (currentState == EnemyState.Chasing)
 		{
 
-			print("Enemy chasing");
-
 			if (targetFish == null)
 			{
 				if (disFish1 < disFish2)
@@ -103,8 +99,6 @@ public class enemyAI : MonoBehaviour
 		}
 		else if (currentState == EnemyState.Attacking)
 		{
-			print("Enemy attacking");
-
 			StartCoroutine(PushTarget(targetFish));
 
 		}
