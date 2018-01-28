@@ -30,8 +30,8 @@ public class fishMovement2 : MonoBehaviour {
 	void MoveTowards(float myMoveSpeed, float myTurnSpeed,string fishNum)
 	{
 		Vector3 moveForward = myMoveSpeed * new Vector3(Input.GetAxis("Horizontal2"+fishNum) * Time.deltaTime, Input.GetAxis("Vertical2"+fishNum) * Time.deltaTime, 0);
-		transform.position += moveForward * Time.deltaTime * myTurnSpeed;
-		transform.up += moveForward.normalized;
+        transform.position += moveForward;
+		transform.up += moveForward.normalized * Time.deltaTime * myTurnSpeed; ;
 
 	}
 }
