@@ -8,7 +8,7 @@ public class camControl : MonoBehaviour {
 	public float dampSpeed;
 	public GameObject Fish1;
 	public GameObject Fish2;
-	Vector3 velocity =  Vector3.zero;
+	//Vector3 velocity =  Vector3.zero;
 
 
 	// Use this for initialization
