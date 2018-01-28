@@ -16,6 +16,6 @@ public class Midpoint : MonoBehaviour {
 	void Update () 
 	{
 		Vector3 midpoint = (fish1.transform.position + fish2.transform.position) / 2f;
-		transform.position = midpoint;
+		transform.position = midpoint; 
 	}
 }

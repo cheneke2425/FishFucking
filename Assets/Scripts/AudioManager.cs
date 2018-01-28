@@ -42,10 +42,14 @@ public class AudioManager : MonoBehaviour
 		
 	}
 	
-	void OnCollisionEnter2D (Collision2D collision)
+	void OnTriggerEnter2D (Collider2D collision)
 	{
+		
+		
 		if (collision.gameObject.tag == "Fuck")
 		{
+			Debug.Log("firstCol");
+			master.SetFloat("recyclerVol", -0f);
 			enteredBox = true;
 			play(volume);
 			volume = 0.5f;
@@ -58,6 +62,7 @@ public class AudioManager : MonoBehaviour
 
 	private void Update()
 	{
+		Debug.Log(enteredBox);
 		Debug.Log("MIXERSCALE" + mixerVolScale);
 		if (item1 == null || colTest1)
 		{
@@ -70,18 +75,21 @@ public class AudioManager : MonoBehaviour
 		}
 	}
 
-	private void OnCollisionStay2D(Collision2D collision)
+	private void OnCOllisionStay2D(Collision2D collision)
 	{
+		Debug.Log("collided");
 		if (collision.gameObject.tag == "Fuck")
 		{
-			if (enteredBox)
+			
+			if (enteredBox) 
 			{
 				
+				//Debug.Log("INBOX");	
 				master.SetFloat("recyclerVol", 0f);
 				
 				float distance = distanceVector.magnitude;
 				drumTrack.volume = 1 / distance;
-				Debug.Log("Fuck me");
+				//Debug.Log("Fuck me");
 
 
 				if (item1 != null || colTest1 == false)
@@ -105,8 +113,8 @@ public class AudioManager : MonoBehaviour
 		//if (collision.gameObject.tag == "Fuck")
 		//{
 		volume = 0f;
-		mixerVolScale -= 80;
-		master.SetFloat("recyclerVol", mixerVolScale);
+
+		master.SetFloat("recyclerVol", -80f);
 		
 		//}
 	}
@@ -120,7 +128,7 @@ public class AudioManager : MonoBehaviour
 	void FixedUpdate()
 	{
 		//track1.volume = volume;
-		distanceVector = midpoint.GetComponent<Transform>().position - transform.position;
+		distanceVector = midpoint.GetComponent<Transform>().position - transform.position; 
 		itemDistanceVector = midpoint.GetComponent<Transform>().position - item1.transform.position;
 		itemDistanceVector2 = midpoint.GetComponent<Transform>().position - item2.transform.position;
 		Debug.Log(volume);

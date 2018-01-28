@@ -17,10 +17,9 @@
           <e p="AudioManager.cs" t="Include" />
           <e p="camControl.cs" t="Include" />
           <e p="distanceCheck.cs" t="Include" />
+          <e p="enemyAI.cs" t="Include" />
           <e p="fishMovement.cs" t="Include" />
-          <e p="fishMovement2.cs" t="Include" />
           <e p="Global.cs" t="Include" />
-          <e p="ItemLogic.cs" t="Include" />
           <e p="Midpoint.cs" t="Include" />
           <e p="SingletonHelper.cs" t="Include" />
         </e>

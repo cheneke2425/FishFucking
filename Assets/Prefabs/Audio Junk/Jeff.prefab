@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4569503021652536}
   - component: {fileID: 212107641263784446}
   - component: {fileID: 61999286012042880}
-  - component: {fileID: 114461391561109480}
   - component: {fileID: 82329036251485224}
   - component: {fileID: 114358520935485006}
   m_Layer: 0
@@ -78,7 +77,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ae29e1be82ac47e4285c12762074ff66, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -162,10 +161,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item1: {fileID: 0}
   item2: {fileID: 0}
-  master: {fileID: 0}
+  master: {fileID: 24100000, guid: 223797fad160a5144a29a776a7094242, type: 2}
   itemTrack1: {fileID: 0}
-  itemTrack2: {fileID: 0}
-  drumTrack: {fileID: 0}
+  itemTrack2: {fileID: 82301109271932286, guid: 057de5f31ee2b9241bed6501141c415d,
+    type: 2}
+  drumTrack: {fileID: 82301109271932286, guid: 057de5f31ee2b9241bed6501141c415d, type: 2}
   volume: 0
   distanceVector: {x: 0, y: 0, z: 0}
   itemDistanceVector: {x: 0, y: 0, z: 0}
@@ -174,19 +174,6 @@ MonoBehaviour:
   midpoint: {fileID: 0}
   colTest1: 0
   colTest2: 0
---- !u!114 &114461391561109480
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1644545870586578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35acb558a97291c478e3d5bff9146400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fish1: {fileID: 0}
-  fish2: {fileID: 0}
 --- !u!212 &212107641263784446
 SpriteRenderer:
   m_ObjectHideFlags: 1
