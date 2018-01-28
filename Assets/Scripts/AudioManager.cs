@@ -1,20 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.XR.WSA;
 
 public class AudioManager : MonoBehaviour
 {
-
 	//audio sources for the specific parts of the track
+
+	public GameObject item1;
+	public GameObject item2;
+
+	public AudioMixer master;
 	
-	public GameObject audSource;
-	
-	public AudioSource audio;
+	public AudioSource track1;
+	public AudioSource track2;
+	public AudioSource track3;
 	
 	public float volume = 0f;
 
 	public Vector3 distanceVector;
+	public Vector3 itemDistanceVector;
+	public Vector3 itemDistanceVector2;
 
 	public BoxCollider2D collider;
 
@@ -34,6 +41,20 @@ public class AudioManager : MonoBehaviour
 		//volume = 0f;
 	}
 
+
+	private void Update()
+	{
+		if (item1 == null)
+		{
+			track1.volume -= 0.1f;
+		}
+
+		if (item2 == null)
+		{
+			track2.volume -= 0.1f;
+		}
+	}
+
 	private void OnCollisionStay2D(Collision2D collision)
 	{
 		if (collision.gameObject.tag == "Fuck")
@@ -41,8 +62,16 @@ public class AudioManager : MonoBehaviour
 			if (enteredBox)
 			{
 				float distance = distanceVector.magnitude;
-				audio.volume = 1 / distance;
+				track3.volume = 1 / distance;
 				Debug.Log("Fuck me");
+
+				float distance1 = itemDistanceVector.magnitude;
+				track1.volume = 1 / distance1;
+				
+				
+				float distance2 = itemDistanceVector2.magnitude;
+				track2.volume = 1 / distance2;
+
 			}
 		}
 	}
@@ -57,15 +86,18 @@ public class AudioManager : MonoBehaviour
 
 	void play(float volume)
 	{
-		audio.volume = volume;
-		audio.Play();
+		//audio.volume = volume;
+		//audio.Play();
 	}
 
 	void FixedUpdate()
 	{
-		audio.volume = volume;
+		track1.volume = volume;
 		distanceVector = midpoint.GetComponent<Transform>().position - transform.position;
+		itemDistanceVector = midpoint.GetComponent<Transform>().position - item1.transform.position;
+		itemDistanceVector2 = midpoint.GetComponent<Transform>().position - item2.transform.position;
 		Debug.Log(volume);
+		
 	}
 
 

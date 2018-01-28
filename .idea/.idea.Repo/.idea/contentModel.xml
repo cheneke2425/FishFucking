@@ -15,6 +15,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AudioManager.cs" t="Include" />
+          <e p="camControl.cs" t="Include" />
           <e p="distanceCheck.cs" t="Include" />
           <e p="fishMovement.cs" t="Include" />
           <e p="fishMovement2.cs" t="Include" />
