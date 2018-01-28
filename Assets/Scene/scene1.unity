@@ -410,9 +410,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51039c46e1ad5f4489d226d217f683b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  defaultSpeed: 3
+  changingSpeed: 0
   turnSpeed: 40
   fishNumInput: 2
+  items: 0
+  item1: 0
+  item2: 0
+  item3: 0
+  item4: 0
+  item5: 0
+  item6: 0
+  item7: 0
+  item8: 0
+  blinkSpeed: 30
+  coolDown: 2
 --- !u!1 &1050865807
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,9 +485,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51039c46e1ad5f4489d226d217f683b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  defaultSpeed: 3
+  changingSpeed: 0
   turnSpeed: 40
   fishNumInput: 1
+  items: 0
+  item1: 0
+  item2: 0
+  item3: 0
+  item4: 0
+  item5: 0
+  item6: 0
+  item7: 0
+  item8: 0
+  blinkSpeed: 30
+  coolDown: 5
 --- !u!50 &1304621532
 Rigidbody2D:
   serializedVersion: 4
