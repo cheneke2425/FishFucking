@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 551212165}
   m_Layer: 0
   m_Name: items
-  m_TagString: Untagged
+  m_TagString: Beads
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -500,6 +500,8 @@ MonoBehaviour:
   movementSpeed: 3
   turnSpeed: 40
   fishNumInput: 2
+  dashSpeed: 5
+  dashCoolDownSeconds: 0
 --- !u!1 &1050865807
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +565,8 @@ MonoBehaviour:
   movementSpeed: 3
   turnSpeed: 40
   fishNumInput: 1
+  dashSpeed: 5
+  dashCoolDownSeconds: 2
 --- !u!50 &1304621532
 Rigidbody2D:
   serializedVersion: 4
@@ -576,7 +580,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 1.5
-  m_AngularDrag: 3.53
+  m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -773,7 +777,7 @@ GameObject:
   - component: {fileID: 2061723797}
   m_Layer: 0
   m_Name: items (1)
-  m_TagString: Untagged
+  m_TagString: Perfume
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

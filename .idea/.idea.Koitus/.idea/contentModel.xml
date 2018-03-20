@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\jwana\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_Koitus.1581249803.00" t="ExcludeRecursive" />
+    <e p="C:\Users\jwana\Desktop\Everything Folder\Repositories\Koitus" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="Editor" t="Include">
+            <e p="JetBrains" t="Include">
+              <e p="Unity3DRider.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="AudioManager.cs" t="Include" />
+          <e p="camControl.cs" t="Include" />
+          <e p="distanceCheck.cs" t="Include" />
+          <e p="enemyAI.cs" t="Include" />
+          <e p="Global.cs" t="Include" />
+          <e p="ItemColl.cs" t="Include" />
+          <e p="Midpoint.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
+          <e p="SingletonHelper.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Koitus.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
